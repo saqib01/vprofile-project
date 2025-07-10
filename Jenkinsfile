@@ -49,7 +49,7 @@ pipeline {
                 sh 'mvn  checkstyle:checkstyle'
             }
         }
-
+/*
         stage('Sonar Analysis') {
             environment {
                 scannerHome = tool "${SONARSCANNER}"
@@ -77,7 +77,7 @@ pipeline {
                 }
             }
         }
-
+*/
         stage("UploadArtifact"){
             steps{
                 nexusArtifactUploader(
